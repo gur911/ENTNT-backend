@@ -5,7 +5,7 @@ const companySchema = new mongoose.Schema({
   location: String,
   linkedIn: {
     type: String,
-    required: [true, "2378642784623789241367894required"],
+    required: true,
   },
   emails: [String],
   phoneNumbers: [String],

@@ -6,9 +6,11 @@ const Communication = require('../models/Commu');
 
 router.get('/', async (req, res) => {
   try {
-    const comms = await Communication.find().sort('-date');
+    const comms = await Communication.find();
+    console.log("Comm : " , comms);
     res.status(200).json(comms);
   } catch (err) {
+    console.log(err);
     res.status(500).json({ error: 'Failed to fetch communications' });
   }
 });
